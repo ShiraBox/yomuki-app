@@ -15,4 +15,4 @@
 
 
 ## License
-[GNU GPL 3.0](https://github.com/Tomuki/yomuki-app/blob/main/LICENSE)
+[GNU GPL 3.0](https://github.com/Tomuki/yomuki-app/blob/master/LICENSE)
