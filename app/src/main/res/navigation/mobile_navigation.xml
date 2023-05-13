@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="me.urfate.yomuki.ui.fragment.home.CatalogFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_catalog">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_bookmarks"
+            app:destination="@id/navigation_bookmarks" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_updates"
+            app:destination="@id/navigation_updates" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_bookmarks"
+        android:name="me.urfate.yomuki.ui.fragment.favourites.FavouritesFragment"
+        android:label="@string/title_bookmarks"
+        tools:layout="@layout/fragment_favourites" >
+        <action
+            android:id="@+id/action_navigation_bookmarks_to_navigation_settings2"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_bookmarks_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="me.urfate.yomuki.ui.fragment.profile.PreferencesFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_bookmarks"
+            app:destination="@id/navigation_bookmarks" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_updates"
+        android:name="me.urfate.yomuki.ui.fragment.home.updates.UpdatesFragment"
+        android:label="@string/releases_updates"
+        tools:layout="@layout/fragment_updated_releases" >
+        <action
+            android:id="@+id/action_navigation_updates_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>

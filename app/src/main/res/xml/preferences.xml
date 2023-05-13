@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:title="@string/general">
+
+        <Preference
+            android:key="history"
+            android:title="@string/history"
+            app:iconSpaceReserved="false"
+            app:icon="@drawable/round_history_24" />
+
+        <SwitchPreferenceCompat
+            android:key="explicit_content"
+            android:title="@string/explicit_content"
+            android:summary="@string/explicit_content_summary"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false"
+            app:icon="@drawable/outline_explicit_24" />
+
+        <Preference
+            android:key="default_source"
+            android:title="@string/default_source"
+            android:summary="@string/default_source_summary"
+            app:iconSpaceReserved="false"
+            app:icon="@drawable/outline_library_books_24" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/about">
+
+        <Preference
+            android:key="feedback"
+            android:title="@string/feedback"
+            android:summary="@string/feedback_summary"
+            app:iconSpaceReserved="false"
+            app:icon="@drawable/outline_feedback_24" />
+
+        <Preference
+            android:key="help"
+            android:title="@string/help"
+            app:iconSpaceReserved="false"
+            app:icon="@drawable/outline_help_outline_24" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
